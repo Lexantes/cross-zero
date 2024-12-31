@@ -1,3 +1,5 @@
 module github.com/Lexantes/cross-zero
 
-go 1.23.4
+go 1.23.2
+
+require github.com/gorilla/websocket v1.5.3 // indirect
