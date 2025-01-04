@@ -74,7 +74,6 @@ func (g *Game) isWin() bool {
 	// Проверка по строкам
 	for i := 0; i < n; i++ {
 		if g.State[i][1] == g.State[i][0] && g.State[i][1] == g.State[i][2] && g.State[i][1] != "_" {
-			fmt.Printf("Проверка по строкам %d", i)
 			return true
 		}
 	}
@@ -82,14 +81,12 @@ func (g *Game) isWin() bool {
 	// Проверка по столбцам
 	for i := 0; i < n; i++ {
 		if g.State[1][i] == g.State[0][i] && g.State[1][i] == g.State[2][i] && g.State[1][i] != "_" {
-			fmt.Printf("Проверка по столбцам %d", i)
 			return true
 		}
 	}
 
 	// Проверка по горизонтали
 	if ((g.State[1][1] == g.State[0][0] && g.State[1][1] == g.State[2][2]) || (g.State[1][1] == g.State[2][0] && g.State[1][1] == g.State[0][2])) && g.State[1][1] != "_" {
-		fmt.Printf("Проверка по горизонтали ")
 		return true
 	}
 
